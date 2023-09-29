@@ -25,10 +25,10 @@ namespace AkademiPlus.IdentityServer.Controllers
 		{
 			var user = new ApplicationUser()
 			{
-				NameSurname = signUpDTO.NameSurname,
-				Email = signUpDTO.Email,
-				City = signUpDTO.City,
-				UserName = signUpDTO.Username
+                UserName = signUpDTO.Username,
+                Email = signUpDTO.Email,
+                NameSurname = signUpDTO.NameSurname,
+				City = signUpDTO.City
 
 			};
 			await  _userManager.CreateAsync(user,signUpDTO.Password);

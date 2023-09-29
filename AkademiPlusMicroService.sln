@@ -19,7 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlus.IdentityServer"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{4B646810-2788-4367-9369-B543E5ED4816}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Discount", "Services\Discount\AkademiPlusMicroService.Discount\AkademiPlusMicroService.Discount.csproj", "{4D72C8F9-C1E0-40F8-906D-0A25434ADD91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlusMicroService.Discount", "Services\Discount\AkademiPlusMicroService.Discount\AkademiPlusMicroService.Discount.csproj", "{4D72C8F9-C1E0-40F8-906D-0A25434ADD91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{114DAC9D-CA63-4A04-BC6E-AD459BFA9ABB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Basket", "Services\Basket\AkademiPlusMicroService.Basket\AkademiPlusMicroService.Basket.csproj", "{6832C6BB-26A6-44A8-A5BF-7943D6569E84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{4D72C8F9-C1E0-40F8-906D-0A25434ADD91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D72C8F9-C1E0-40F8-906D-0A25434ADD91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D72C8F9-C1E0-40F8-906D-0A25434ADD91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6832C6BB-26A6-44A8-A5BF-7943D6569E84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6832C6BB-26A6-44A8-A5BF-7943D6569E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6832C6BB-26A6-44A8-A5BF-7943D6569E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6832C6BB-26A6-44A8-A5BF-7943D6569E84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +62,8 @@ Global
 		{1103081B-C049-4D86-ADB5-1D00CBDED6A7} = {711E182F-F0A3-49C0-AB4D-425137426979}
 		{4B646810-2788-4367-9369-B543E5ED4816} = {5DDFA103-7C99-4A2A-81FC-73E314A5D064}
 		{4D72C8F9-C1E0-40F8-906D-0A25434ADD91} = {4B646810-2788-4367-9369-B543E5ED4816}
+		{114DAC9D-CA63-4A04-BC6E-AD459BFA9ABB} = {5DDFA103-7C99-4A2A-81FC-73E314A5D064}
+		{6832C6BB-26A6-44A8-A5BF-7943D6569E84} = {114DAC9D-CA63-4A04-BC6E-AD459BFA9ABB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {23501C53-D97F-46A4-8B8A-D2DCB83DF9DF}

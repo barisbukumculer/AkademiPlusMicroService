@@ -10,12 +10,13 @@ namespace AkademiPlus.IdentityServer
 {
     public static class Config
     {
-        public static IEnumerable<ApiResource> apiResources =>
-            new ApiResource[]
-            {
-                new ApiResource("resource_catalog"){Scopes={"catalog_fullpermission"}},
-                new ApiResource(IdentityServerConstants.LocalApi.ScopeName),
-            };
+        public static IEnumerable<ApiResource> ApiResources => new ApiResource[]
+        {
+            new ApiResource("resource_catalog"){Scopes={"catalog_fullpermission"}},
+            new ApiResource("resource_discount"){Scopes={"discount_fullpermission"}},
+
+            new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
+        };
         public static IEnumerable<IdentityResource> IdentityResources =>
                    new IdentityResource[]
                    {
@@ -27,7 +28,8 @@ namespace AkademiPlus.IdentityServer
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             {
-                new ApiScope("catalog_fullpermission","Ürün Listesi için tam erişim."),
+                new ApiScope("catalog_fullpermission","Ürün listesi için tam erişim."),
+                new ApiScope("discount_fullpermission","İndirim işlemleri için tam erişim."),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -43,22 +45,27 @@ namespace AkademiPlus.IdentityServer
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = { new Secret("secret".Sha256()) },
 
-                    AllowedScopes = { "catalog_fullpermission",IdentityServerConstants.LocalApi.ScopeName }
+                    AllowedScopes = { "catalog_fullpermission" , IdentityServerConstants.LocalApi.ScopeName }
                 },
 
                 // interactive client using code flow + pkce
                 new Client
                 {
                     ClientId = "AkademiPlus2Client",
-					ClientName = "AkademiPlus2ClientName",
-					ClientSecrets = { new Secret("secret".Sha256()) },
+                    ClientName = "AkademiPlus2ClientName",
+                    ClientSecrets = { new Secret("secret".Sha256()) },
 
-					AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
 
                     AllowOfflineAccess = true,
-					 AllowedScopes = { "catalog_fullpermission", IdentityServerConstants.LocalApi.ScopeName ,IdentityServerConstants.StandardScopes.Email, IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile},
-                    AccessTokenLifetime=3600
-				},
+                    AllowedScopes = { "catalog_fullpermission", "discount_fullpermission",
+                        IdentityServerConstants.LocalApi.ScopeName,
+                        IdentityServerConstants.StandardScopes.Email,
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.OfflineAccess},
+                    AccessTokenLifetime = 3600
+                },
             };
     }
 }
