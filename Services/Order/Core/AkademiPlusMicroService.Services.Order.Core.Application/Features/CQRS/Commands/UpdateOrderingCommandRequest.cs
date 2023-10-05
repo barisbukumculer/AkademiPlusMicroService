@@ -1,4 +1,5 @@
 ﻿using AkademiPlusMicroService.Services.Order.Core.Application.DTOs.AdressDtos;
+using AkademiPlusMicroService.Services.Order.Core.Application.DTOs.OrderingDtos;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace AkademiPlusMicroService.Services.Order.Core.Application.Features.CQRS.Commands
 {
-    public class CreateAdressCommandRequest:IRequest<CreateAdressDto>
+    public class UpdateOrderingCommandRequest : IRequest<UpdateOrderingDto>
     {
+        public int OrderingId { get; set; }
         public string UserId { get; set; }
-        public string District { get; set; }
-        public string City { get; set; }
-        public string Detail { get; set; }
+        public decimal TotalPrice { get; set; }
+        public DateTime OrderDate { get; set; }
     }
 }

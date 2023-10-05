@@ -1,4 +1,5 @@
 ﻿using AkademiPlusMicroService.Services.Order.Core.Application.DTOs.AdressDtos;
+using AkademiPlusMicroService.Services.Order.Core.Application.DTOs.OrderingDtos;
 using AkademiPlusMicroService.Services.Order.Core.Application.Features.CQRS.Commands;
 using AkademiPlusMicroService.Services.Order.Core.Application.Interfaces;
 using AkademiPlusMicroService.Services.Order.Core.Domain.Entities;
@@ -12,29 +13,28 @@ using System.Threading.Tasks;
 
 namespace AkademiPlusMicroService.Services.Order.Core.Application.Features.CQRS.Handlers
 {
-    public class CreateAdressCommandHandler : IRequestHandler<CreateAdressCommandRequest, CreateAdressDto>
+    public class UpdateOrderingCommandHandler : IRequestHandler<UpdateOrderingCommandRequest, UpdateOrderingDto>
     {
-        private readonly IRepository<Adress> _repository;
+        private readonly IRepository<Ordering> _repository;
         private readonly IMapper _mapper;
 
-        public CreateAdressCommandHandler(IRepository<Adress> repository, IMapper mapper)
+        public UpdateOrderingCommandHandler(IRepository<Ordering> repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
         }
 
-        public async Task<CreateAdressDto> Handle(CreateAdressCommandRequest request, CancellationToken cancellationToken)
+        public async Task<UpdateOrderingDto> Handle(UpdateOrderingCommandRequest request, CancellationToken cancellationToken)
         {
-            var values = new Adress
+            var value = new Ordering
             {
-                City = request.City,
-                Detail = request.Detail,
-                District = request.District,
+                OrderDate = request.OrderDate,
+                TotalPrice = request.TotalPrice,
+                OrderingId = request.OrderingId,
                 UserId = request.UserId
             };
-            var result = await _repository.CreateAsync(values);
-
-            return _mapper.Map<CreateAdressDto>(result);
+            await _repository.UpdateAsync(value);
+            return _mapper.Map<UpdateOrderingDto>(value);
         }
     }
 }
