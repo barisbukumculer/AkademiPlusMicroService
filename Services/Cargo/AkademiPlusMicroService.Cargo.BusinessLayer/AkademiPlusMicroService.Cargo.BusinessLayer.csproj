@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="NewFolder\" />
+    <ProjectReference Include="..\AkademiPlusMicroService.Cargo.DataAccessLayer\AkademiPlusMicroService.Cargo.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\AkademiPlusMicroService.Cargo.EntityLayer\AkademiPlusMicroService.Cargo.EntityLayer.csproj" />
   </ItemGroup>
 
 </Project>

@@ -43,13 +43,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IEAMicroService.Services.Or
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cargo", "Cargo", "{C280DDE2-DC4C-4CB1-8EEB-6A849C245381}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Cargo.EntityLayer", "Services\Cargo\AkademiPlusMicroService.Cargo.EntityLayer\AkademiPlusMicroService.Cargo.EntityLayer.csproj", "{5031DFC1-E2BF-4EF7-A1C1-D2C597383D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlusMicroService.Cargo.EntityLayer", "Services\Cargo\AkademiPlusMicroService.Cargo.EntityLayer\AkademiPlusMicroService.Cargo.EntityLayer.csproj", "{5031DFC1-E2BF-4EF7-A1C1-D2C597383D5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Cargo.BusinessLayer", "Services\Cargo\AkademiPlusMicroService.Cargo.BusinessLayer\AkademiPlusMicroService.Cargo.BusinessLayer.csproj", "{0BC8194E-E3F4-4830-AB78-63728FC3B316}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlusMicroService.Cargo.BusinessLayer", "Services\Cargo\AkademiPlusMicroService.Cargo.BusinessLayer\AkademiPlusMicroService.Cargo.BusinessLayer.csproj", "{0BC8194E-E3F4-4830-AB78-63728FC3B316}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Cargo.DataAccessLayer", "Services\Cargo\AkademiPlusMicroService.Cargo.DataAccessLayer\AkademiPlusMicroService.Cargo.DataAccessLayer.csproj", "{933529B1-011C-4DC1-99BA-19231017C324}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlusMicroService.Cargo.DataAccessLayer", "Services\Cargo\AkademiPlusMicroService.Cargo.DataAccessLayer\AkademiPlusMicroService.Cargo.DataAccessLayer.csproj", "{933529B1-011C-4DC1-99BA-19231017C324}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Cargo.PresentationLayer", "Services\Cargo\AkademiPlusMicroService.Cargo.PresentationLayer\AkademiPlusMicroService.Cargo.PresentationLayer.csproj", "{BCC91F3F-BE38-495C-A9B4-3920EFCC14FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlusMicroService.Cargo.PresentationLayer", "Services\Cargo\AkademiPlusMicroService.Cargo.PresentationLayer\AkademiPlusMicroService.Cargo.PresentationLayer.csproj", "{BCC91F3F-BE38-495C-A9B4-3920EFCC14FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", "{CF1E199A-7A21-4767-B32F-EFE0E1066321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Services.PhotoStock", "Services\AkademiPlusMicroService.Services.PhotoStock\AkademiPlusMicroService.Services.PhotoStock.csproj", "{7B56F758-8740-4797-A574-37AC54F5F79A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{2A07ECDD-0F92-42A3-BDFA-0056FD0E339F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Services.Payment", "Services\AkademiPlusMicroService.Services.Payment\AkademiPlusMicroService.Services.Payment.csproj", "{06BA880A-B0E6-45F9-9F24-A437AD140A78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +117,14 @@ Global
 		{BCC91F3F-BE38-495C-A9B4-3920EFCC14FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCC91F3F-BE38-495C-A9B4-3920EFCC14FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCC91F3F-BE38-495C-A9B4-3920EFCC14FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B56F758-8740-4797-A574-37AC54F5F79A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B56F758-8740-4797-A574-37AC54F5F79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B56F758-8740-4797-A574-37AC54F5F79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B56F758-8740-4797-A574-37AC54F5F79A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06BA880A-B0E6-45F9-9F24-A437AD140A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06BA880A-B0E6-45F9-9F24-A437AD140A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06BA880A-B0E6-45F9-9F24-A437AD140A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06BA880A-B0E6-45F9-9F24-A437AD140A78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -135,6 +151,10 @@ Global
 		{0BC8194E-E3F4-4830-AB78-63728FC3B316} = {C280DDE2-DC4C-4CB1-8EEB-6A849C245381}
 		{933529B1-011C-4DC1-99BA-19231017C324} = {C280DDE2-DC4C-4CB1-8EEB-6A849C245381}
 		{BCC91F3F-BE38-495C-A9B4-3920EFCC14FB} = {C280DDE2-DC4C-4CB1-8EEB-6A849C245381}
+		{CF1E199A-7A21-4767-B32F-EFE0E1066321} = {5DDFA103-7C99-4A2A-81FC-73E314A5D064}
+		{7B56F758-8740-4797-A574-37AC54F5F79A} = {CF1E199A-7A21-4767-B32F-EFE0E1066321}
+		{2A07ECDD-0F92-42A3-BDFA-0056FD0E339F} = {5DDFA103-7C99-4A2A-81FC-73E314A5D064}
+		{06BA880A-B0E6-45F9-9F24-A437AD140A78} = {2A07ECDD-0F92-42A3-BDFA-0056FD0E339F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {23501C53-D97F-46A4-8B8A-D2DCB83DF9DF}
