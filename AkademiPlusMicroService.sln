@@ -53,11 +53,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlusMicroService.Car
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", "{CF1E199A-7A21-4767-B32F-EFE0E1066321}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Services.PhotoStock", "Services\AkademiPlusMicroService.Services.PhotoStock\AkademiPlusMicroService.Services.PhotoStock.csproj", "{7B56F758-8740-4797-A574-37AC54F5F79A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlusMicroService.Services.PhotoStock", "Services\AkademiPlusMicroService.Services.PhotoStock\AkademiPlusMicroService.Services.PhotoStock.csproj", "{7B56F758-8740-4797-A574-37AC54F5F79A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{2A07ECDD-0F92-42A3-BDFA-0056FD0E339F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Services.Payment", "Services\AkademiPlusMicroService.Services.Payment\AkademiPlusMicroService.Services.Payment.csproj", "{06BA880A-B0E6-45F9-9F24-A437AD140A78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlusMicroService.Services.Payment", "Services\AkademiPlusMicroService.Services.Payment\AkademiPlusMicroService.Services.Payment.csproj", "{06BA880A-B0E6-45F9-9F24-A437AD140A78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{91DB64E0-22D9-4BE4-BDC9-92C30DAF8D53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.Gateway", "Gateways\AkademiPlusMicroService.Gateway\AkademiPlusMicroService.Gateway.csproj", "{F87E320B-3278-4C0C-A5DF-68F1FD383A8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{B5DBC41A-AE34-48A4-B8A2-E52EC18BF812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroService.WebUI", "Frontends\AkademiPlusMicroService.WebUI\AkademiPlusMicroService.WebUI.csproj", "{0A5E2283-FF24-441E-A88F-FFA0FDA2FE81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +133,14 @@ Global
 		{06BA880A-B0E6-45F9-9F24-A437AD140A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06BA880A-B0E6-45F9-9F24-A437AD140A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06BA880A-B0E6-45F9-9F24-A437AD140A78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F87E320B-3278-4C0C-A5DF-68F1FD383A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87E320B-3278-4C0C-A5DF-68F1FD383A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87E320B-3278-4C0C-A5DF-68F1FD383A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87E320B-3278-4C0C-A5DF-68F1FD383A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A5E2283-FF24-441E-A88F-FFA0FDA2FE81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5E2283-FF24-441E-A88F-FFA0FDA2FE81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5E2283-FF24-441E-A88F-FFA0FDA2FE81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5E2283-FF24-441E-A88F-FFA0FDA2FE81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -155,6 +171,8 @@ Global
 		{7B56F758-8740-4797-A574-37AC54F5F79A} = {CF1E199A-7A21-4767-B32F-EFE0E1066321}
 		{2A07ECDD-0F92-42A3-BDFA-0056FD0E339F} = {5DDFA103-7C99-4A2A-81FC-73E314A5D064}
 		{06BA880A-B0E6-45F9-9F24-A437AD140A78} = {2A07ECDD-0F92-42A3-BDFA-0056FD0E339F}
+		{F87E320B-3278-4C0C-A5DF-68F1FD383A8B} = {91DB64E0-22D9-4BE4-BDC9-92C30DAF8D53}
+		{0A5E2283-FF24-441E-A88F-FFA0FDA2FE81} = {B5DBC41A-AE34-48A4-B8A2-E52EC18BF812}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {23501C53-D97F-46A4-8B8A-D2DCB83DF9DF}

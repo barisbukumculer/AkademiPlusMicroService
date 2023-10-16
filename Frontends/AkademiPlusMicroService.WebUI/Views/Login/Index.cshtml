@@ -1,0 +1,23 @@
+﻿@using AkademiPlusMicroService.WebUI.DTOs.LoginDTOs;
+@model LoginUserDto
+@{
+    Layout = null;
+}
+
+<h3>Kullanıcı Giriş</h3>
+<br />
+<div class="container">
+    <div class="row">
+        <form method="post">
+            <label class="form-control">Kullanıcı Adınız</label>
+            <input type="text" asp-for="Username" />
+            <br />
+            <label class="form-control">Şifreniz</label>
+            <input type="text" asp-for="Password" />
+            <br />
+            <button class="btn btn-outline-primary">Giriş</button>
+        </form>
+
+    </div>
+
+</div>

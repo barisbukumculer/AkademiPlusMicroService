@@ -1,0 +1,28 @@
+﻿@using AkademiPlusMicroService.WebUI.DTOs.RegisterDTOs;
+@model CreateRegisterDTO
+@{
+    Layout = null;
+}
+<h3>Kayıt Olma Sayfası</h3>
+<br />
+<div class="container">
+    <form method="post">
+        <label class="form-control">Adınız Soyadınız</label>
+        <input class="form-control" type="text" asp-for="NameSurname" />
+        <br />
+        <label class="form-control">Kullanıcı Adınız</label>
+        <input class="form-control" type="text" asp-for="Username" />
+        <br />
+        <label class="form-control">Şifreniz</label>
+        <input class="form-control" type="password" asp-for="Password" />
+        <br />
+        <label class="form-control">Email Adresiniz</label>
+        <input class="form-control" type="email" asp-for="Email" />
+        <br />
+        <label class="form-control">Yaşadığınız Şehir</label>
+        <input class ="form-control" type="text" asp-for="City" />
+        <br />
+        <button class="btn btn-outline-success">Kayıt Ol</button>
+    </form>
+   <a href="/Login/Index"class="btn btn-outline-primary">Giriş Yap</a>
+</div>
