@@ -1,10 +1,12 @@
 ﻿using AkademiPlusMicroService.Discount.DTO_s;
 using AkademiPlusMicroService.Discount.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AkademiPlusMicroService.Discount.Controllers
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class DiscountCouponController : ControllerBase

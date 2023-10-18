@@ -1,7 +1,14 @@
+using AkademiPlusMicroService.WebUI.Services.Abstract;
+using AkademiPlusMicroService.WebUI.Services.Concrete;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ICategoryService,CategoryService>();
+builder.Services.AddScoped<IProductService,ProductService>();
+
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
@@ -18,6 +25,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
