@@ -1,5 +1,5 @@
-﻿@using AkademiPlusMicroService.WebUI.DTOs.CategoryDTOs;
-@model List<ResultCategoryDTO>
+﻿@model List<AkademiPlusMicroService.WebUI.DTOs.CategoryDTOs.ResultCategoryDTO>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -20,11 +20,11 @@
             <tr>
                 <td>@count</td>
                 <td>@item.CategoryName</td>
-                <td><a class="btn btn-warning" href="">Sil</a></td>
-                <td><a class="btn btn-primary" href="">Güncelle</a></td>
+                <td><a class="btn btn-warning" href="/Category/DeleteCategory/@item.CategoryId">Sil</a></td>
+                <td><a class="btn btn-primary" href="/Category/UpdateCategory/@item.CategoryId">Güncelle</a></td>
             </tr>
         }
     </table>
-    <a class="btn btn-success" href="">Yeni Kategori Girişi</a>
+    <a class="btn btn-success" href="/Category/CreateCategory">Yeni Kategori Girişi</a>
 </div>
 

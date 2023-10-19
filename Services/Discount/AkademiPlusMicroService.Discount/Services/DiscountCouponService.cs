@@ -56,6 +56,16 @@ namespace AkademiPlusMicroService.Discount.Services
             }
         }
 
+        public async Task<Response<GetDiscountCouponDto>> GetDiscountById(int id)
+        {
+
+            string sql = "select * from DiscountCoupons where DiscountCouponId = @discountCouponid ";
+            var parameters = new DynamicParameters();
+            parameters.Add("@discountCouponid", id);
+            var status = await _dbConnection.QueryFirstOrDefaultAsync<GetDiscountCouponDto>(sql, parameters);
+            return Response<GetDiscountCouponDto>.Success(_mapper.Map<GetDiscountCouponDto>(status), 200);
+        }
+
         public async Task<Response<List<ResultDiscountCouponDTO>>> GetListAll()
         {
             var values = await _dbConnection.QueryAsync<ResultDiscountCouponDTO>("Select * from DiscountCoupons");

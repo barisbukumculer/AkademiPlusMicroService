@@ -41,5 +41,11 @@ namespace AkademiPlusMicroService.Discount.Controllers
             await _discountCouponService.UpdateDiscountCoupon(updateDiscountCouponDTO);
             return Ok();
         }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetDiscountCouponId(int id)
+        {
+            var value = await _discountCouponService.GetDiscountById(id);
+            return Ok(value);
+        }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson.IO;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using System.Text;
 using JsonConvert = Newtonsoft.Json.JsonConvert;
@@ -17,11 +18,11 @@ namespace AkademiPlusMicroService.WebUI.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task< IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
-            var client=_httpClientFactory.CreateClient();
+            var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("http://localhost:5012/api/DiscountCoupon");
-            var jsonData=await responseMessage.Content.ReadAsStringAsync();
+            var jsonData = await responseMessage.Content.ReadAsStringAsync();
             var values = Newtonsoft.Json.JsonConvert.DeserializeObject<ResultDiscountCouponDTO>(jsonData);
             return View(values.data.ToList());
         }
@@ -53,17 +54,21 @@ namespace AkademiPlusMicroService.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync($"http://localhost:5012/api/DiscountCoupon/{id}");
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            var values = JsonConvert.DeserializeObject<UpdateDiscountCouponDTO>(jsonData);
-            return View(values.data);
+            var jsonObject = JObject.Parse(jsonData);
+            var data = jsonObject["data"].ToString();
+            var values = JsonConvert.DeserializeObject<UpdateDiscountCouponDTO.Data>(data);
+            return View(values);
         }
         [HttpPost]
-        public async Task<IActionResult> UpdateDiscount(UpdateDiscountCouponDTO updateDiscountCouponDTO)
+        public async Task<IActionResult> UpdateDiscount2(UpdateDiscountCouponDTO.Data updateDiscountCouponDtos)
         {
+            updateDiscountCouponDtos.UserId = "abc";
+            updateDiscountCouponDtos.CreatedDate = DateTime.Now;
             var client = _httpClientFactory.CreateClient();
-            var jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(updateDiscountCouponDTO);
+            var jsonData = JsonConvert.SerializeObject(updateDiscountCouponDtos);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var responseMessage = await client.PutAsync("http://localhost:5012/api/DiscountCoupon", stringContent);
             return RedirectToAction("Index");
         }
     }
-}
+  }

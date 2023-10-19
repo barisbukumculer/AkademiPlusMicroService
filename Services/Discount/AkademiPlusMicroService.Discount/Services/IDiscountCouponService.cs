@@ -8,6 +8,7 @@ namespace AkademiPlusMicroService.Discount.Services
         Task<Response<List<ResultDiscountCouponDTO>>> GetListAll(); 
         Task<Response<NoContent>> CreateDiscountCoupon(CreateDiscountCouponDTO createDiscountCouponDTO); 
         Task<Response<NoContent>> UpdateDiscountCoupon(UpdateDiscountCouponDTO updateDiscountCouponDTO); 
-        Task<Response<NoContent>> DeleteDiscountCoupon(int id); 
+        Task<Response<NoContent>> DeleteDiscountCoupon(int id);
+        Task<Response<GetDiscountCouponDto>> GetDiscountById(int id);
     }
 }
